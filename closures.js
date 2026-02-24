@@ -24,20 +24,25 @@ function creerCompte(initiale) {
 }
 
 function makeCounter(initiale) {
-    var valeur = initiale;   
+    var valeur = initiale;
+
     return {
         up: function () {
-            valeur++;        
+            valeur++;
             return valeur;
         },
 
         down: function () {
-            valeur--;       
+            valeur--;
+            return valeur;
+        },
+
+        reset: function () {
+            valeur = initiale - 1;  
             return valeur;
         }
     };
 }
-
 function Tv() {
 var chanelNumber=0
 return {
